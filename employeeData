@@ -66,7 +66,7 @@ contract employeeData {
     constant
     returns(string empName, string empOrg)
   {
-    if(!isEmp(empIDck)) return('not found',0); 
+    if(!isEmp(empIDck)) return('not found','Not Working'); 
     return(
       dataBase9[empIDck].empName, 
       dataBase9[empIDck].empOrg);
@@ -109,3 +109,13 @@ function deleteEmp(uint empID)
       empNameToDelete, 
       rowToDelete);
   }
+  
+  //  function getUserAtIndex(uint index)
+//    public
+//    constant
+//    returns(address userAddress)
+//  {
+//    return userIndex[index];
+//  }
+
+}
