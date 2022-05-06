@@ -15,7 +15,7 @@ contract employeeData {
     string empIdType;
     string empIdNo;
     uint empSalary;
-    string empHash
+    string empHash;
     uint empIdIndex;
   }
   
@@ -60,6 +60,7 @@ contract employeeData {
         dataBase9[empID].empIdType,
         dataBase9[empID].empIdNo,
         dataBase9[empID].empSalary,
+        dataBase9[empID].empHash,
         dataBase9[empID].empIdIndex,
         empID);
   }
@@ -67,7 +68,7 @@ contract employeeData {
   function getEmpData(uint empIDck)
     public 
     constant
-    returns(string empName, string empOrg)
+    returns(string empName, string empOrg, string empHash)
   {
     if(!isEmp(empIDck)) return('not found','Not Working', 'not found'); 
     return(
